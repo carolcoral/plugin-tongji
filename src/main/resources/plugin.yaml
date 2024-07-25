@@ -7,7 +7,7 @@ metadata:
   name: starter
 spec:
   enabled: true
-  requires: ">=2.11.0"
+  requires: ">=2.17.0"
   author:
     name: Halo
     website: https://github.com/halo-dev
@@ -15,8 +15,8 @@ spec:
   homepage: https://github.com/halo-dev/plugin-starter#readme
   repo: https://github.com/halo-dev/plugin-starter
   issues: https://github.com/halo-dev/plugin-starter/issues
-  displayName: "插件快速开始模板"
-  description: "这是一个插件快速开始模板"
+  displayName: "统计插件"
+  description: "获取百度统计、51la统计等访问统计信息的插件"
   license:
     - name: "GPL-3.0"
       url: "https://github.com/halo-dev/plugin-starter/blob/main/LICENSE"

@@ -1,0 +1,66 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: plugin-tongji-settings
+spec:
+  forms:
+    - group: baidu
+      label: 百度统计设置
+      formSchema:
+        - $formkit: radio
+          name: enableBaidu
+          id: enableBaidu
+          key: enableBaidu
+          label: 启用百度统计
+          value: false
+          options:
+            - label: 启用
+              value: true
+            - label: 禁用
+              value: false
+        - $formkit: text
+          name: username
+          value: username
+          key: username
+          if: $get(enableBaidu).value
+          label: 百度统计用户名
+          placeholder: 请输入百度统计用户名
+          help: 如果不输入用户名和密码，获取统计信息等接口会出现异常
+        - $formkit: password
+          name: password
+          value: password
+          key: password
+          if: $get(enableBaidu).value
+          label: 百度统计密码
+          placeholder: 请输入百度统计密码
+          help: 如果不输入用户名和密码，获取统计信息等接口会出现异常
+    - group: 51la
+      label: 51·LA统计设置
+      formSchema:
+        - $formkit: radio
+          name: enableLA
+          id: enableLA
+          key: enableLA
+          label: 启用51LA统计
+          value: false
+          options:
+            - label: 启用
+              value: true
+            - label: 禁用
+              value: false
+        - $formkit: text
+          name: username
+          value: username
+          key: username
+          if: $get(enableLA).value
+          label: 51LA统计用户名
+          placeholder: 请输入51LA统计用户名
+          help: 如果不输入用户名和密码，获取统计信息等接口会出现异常
+        - $formkit: password
+          name: password
+          value: password
+          key: password
+          if: $get(enableLA).value
+          label: 51LA统计密码
+          placeholder: 请输入51LA统计密码
+          help: 如果不输入用户名和密码，获取统计信息等接口会出现异常
